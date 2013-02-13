@@ -27,18 +27,13 @@ uname -v = WINTERMUTE#0
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /home/dgv/stuff/go_appengine_sdk_openbsd_amd64
-PATH: /home/dgv/bin
-PATH: /bin
-PATH: /sbin
 PATH: /usr/bin
+PATH: /bin
 PATH: /usr/sbin
+PATH: /sbin
 PATH: /usr/X11R6/bin
 PATH: /usr/local/bin
 PATH: /usr/local/sbin
-PATH: /usr/games
-PATH: /home/dgv/go/bin
-PATH: .
 
 
 ## ----------- ##
@@ -100,7 +95,7 @@ configure:2862: $? = 0
 configure:2885: result: none needed
 configure:2904: checking for library containing fopen64
 configure:2945: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp//ccJ9nMgB.o(.text+0x7): In function `main':
+/tmp//ccRd8pqf.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:19: undefined reference to `fopen64'
 collect2: ld returned 1 exit status
 configure:2952: $? = 1
@@ -128,7 +123,7 @@ configure: failed program was:
 |   return 0;
 | }
 configure:2945: gcc -o conftest -g -O2   conftest.c -lc   >&5
-/tmp//ccyszRPX.o(.text+0x7): In function `main':
+/tmp//ccqUxoHs.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:19: undefined reference to `fopen64'
 collect2: ld returned 1 exit status
 configure:2952: $? = 1
@@ -378,7 +373,7 @@ configure:3900: checking for iconv.h
 configure:3909: result: no
 configure:3932: checking for fgetc_unlocked
 configure:3988: gcc -o conftest -g -O2   conftest.c  >&5
-/tmp//ccX0gfkD.o(.text+0x7): In function `main':
+/tmp//ccuzR0Qn.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:52: undefined reference to `fgetc_unlocked'
 collect2: ld returned 1 exit status
 configure:3995: $? = 1
@@ -442,7 +437,7 @@ configure:4017: result: no
 configure:3932: checking for fwrite_unlocked
 configure:3988: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:41: warning: conflicting types for built-in function 'fwrite_unlocked'
-/tmp//ccruQ0jl.o(.text+0x7): In function `main':
+/tmp//ccaohhSK.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:52: undefined reference to `fwrite_unlocked'
 collect2: ld returned 1 exit status
 configure:3995: $? = 1
@@ -506,7 +501,7 @@ configure:4017: result: no
 configure:4036: checking for mempcpy
 configure:4092: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:41: warning: conflicting types for built-in function 'mempcpy'
-/tmp//cczmxMCX.o(.text+0x7): In function `main':
+/tmp//ccIu6b6Y.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:52: undefined reference to `mempcpy'
 collect2: ld returned 1 exit status
 configure:4099: $? = 1
@@ -574,7 +569,7 @@ configure:4121: result: yes
 configure:4036: checking for stpcpy
 configure:4092: gcc -o conftest -g -O2   conftest.c  >&5
 conftest.c:42: warning: conflicting types for built-in function 'stpcpy'
-/tmp//ccXaWxLm.o(.text+0x7): In function `main':
+/tmp//cc2qr8sS.o(.text+0x7): In function `main':
 /home/dgv/workspace/llvm-SAFEcode/projects/safecode/conftest.c:53: warning: stpcpy() is dangerous GNU crap; don't use it
 configure:4099: $? = 0
 configure:4121: result: yes
@@ -601,7 +596,9 @@ on wintermute.dgv.home
 
 config.status:755: creating Makefile.common
 config.status:755: creating include/safecode/Config/config.h
+config.status:966: include/safecode/Config/config.h is unchanged
 config.status:755: creating tools/clang/include/clang/Config/config.h
+config.status:966: tools/clang/include/clang/Config/config.h is unchanged
 config.status:984: executing setup commands
 config.status:984: executing Makefile commands
 config.status:984: executing lib/Makefile commands

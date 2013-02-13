@@ -266,14 +266,14 @@
 #define HAVE_MKTEMP 1
 
 /* Define to 1 if you have a working `mmap' system call. */
-/* #undef HAVE_MMAP */
+#define HAVE_MMAP 1
 
 /* Define if mmap() uses MAP_ANONYMOUS to map anonymous pages, or undefine if
    it uses MAP_ANON */
 /* #undef HAVE_MMAP_ANONYMOUS */
 
 /* Define if mmap() can map files into memory */
-/* #undef HAVE_MMAP_FILE */
+#define HAVE_MMAP_FILE 
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -300,7 +300,7 @@
 #define HAVE_PRELOADED_SYMBOLS 1
 
 /* Define to have the %a format string */
-/* #undef HAVE_PRINTF_A */
+#define HAVE_PRINTF_A 1
 
 /* Have pthread_getspecific */
 #define HAVE_PTHREAD_GETSPECIFIC 1
@@ -539,7 +539,7 @@
 #define LLVM_BINDIR "/usr/local/bin"
 
 /* Time at which LLVM was configured */
-#define LLVM_CONFIGTIME "Thu Jan 24 07:21:40 BRST 2013"
+#define LLVM_CONFIGTIME "Tue Feb 12 20:01:31 BRST 2013"
 
 /* Installation directory for data files */
 #define LLVM_DATADIR "/usr/local/share/llvm"
@@ -689,7 +689,7 @@
 /* #undef STAT_MACROS_BROKEN */
 
 /* Define to 1 if you have the ANSI C header files. */
-/* #undef STDC_HEADERS */
+#define STDC_HEADERS 1
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #define TIME_WITH_SYS_TIME 1

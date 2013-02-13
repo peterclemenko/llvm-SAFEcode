@@ -128,7 +128,7 @@ typedef struct {
 } __softboundcets_trie_entry_t;
 
 
-#if defined(__APPLE__)
+#if defined(__APPLE__) || defined(__OpenBSD__)
 #define SOFTBOUNDCETS_MMAP_FLAGS (MAP_ANON|MAP_NORESERVE|MAP_PRIVATE)
 #else
 #define SOFTBOUNDCETS_MMAP_FLAGS (MAP_PRIVATE|MAP_ANONYMOUS|MAP_NORESERVE)

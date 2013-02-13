@@ -543,18 +543,18 @@ s,@build_alias@,|#_!!_#|,g
 s,@host_alias@,|#_!!_#|,g
 s,@target_alias@,|#_!!_#|,g
 s,@LLVM_COPYRIGHT@,|#_!!_#|Copyright (c) 2003-2012 University of Illinois at Urbana-Champaign.,g
-s,@CC@,|#_!!_#|clang,g
+s,@CC@,|#_!!_#|gcc,g
 s,@CFLAGS@,|#_!!_#|-g -O2,g
 s,@LDFLAGS@,|#_!!_#|,g
 s,@CPPFLAGS@,|#_!!_#|,g
-s,@ac_ct_CC@,|#_!!_#|clang,g
+s,@ac_ct_CC@,|#_!!_#|gcc,g
 s,@EXEEXT@,|#_!!_#|,g
 s,@OBJEXT@,|#_!!_#|o,g
-s,@CXX@,|#_!!_#|clang++,g
+s,@CXX@,|#_!!_#|g++,g
 s,@CXXFLAGS@,|#_!!_#|-g -O2,g
-s,@ac_ct_CXX@,|#_!!_#|clang++,g
-s,@CPP@,|#_!!_#|clang -E,g
-s,@subdirs@,|#_!!_#| projects/poolalloc projects/safecode projects/sample,g
+s,@ac_ct_CXX@,|#_!!_#|g++,g
+s,@CPP@,|#_!!_#|gcc -E,g
+s,@subdirs@,|#_!!_#| projects/poolalloc projects/safecode,g
 s,@ENABLE_POLLY@,|#_!!_#|1,g
 s,@LLVM_HAS_POLLY@,|#_!!_#|,g
 s,@build@,|#_!!_#|x86_64-unknown-openbsd5.2,g
@@ -655,7 +655,7 @@ s,@DOXYGEN@,|#_!!_#|,g
 s,@GROFF@,|#_!!_#|/usr/local/bin/groff,g
 s,@GZIPBIN@,|#_!!_#|/usr/bin/gzip,g
 s,@PDFROFF@,|#_!!_#|/usr/local/bin/pdfroff,g
-s,@ZIP@,|#_!!_#|,g
+s,@ZIP@,|#_!!_#|/usr/local/bin/zip,g
 s,@OCAMLC@,|#_!!_#|,g
 s,@OCAMLOPT@,|#_!!_#|,g
 s,@OCAMLDEP@,|#_!!_#|,g
@@ -669,7 +669,7 @@ s,@CONVENIENCE_LTDL_FALSE@,|#_!!_#|,g
 s,@LIBADD_DL@,|#_!!_#|,g
 s,@NO_VARIADIC_MACROS@,|#_!!_#|-Wno-variadic-macros,g
 s,@NO_MISSING_FIELD_INITIALIZERS@,|#_!!_#|-Wno-missing-field-initializers,g
-s,@COVERED_SWITCH_DEFAULT@,|#_!!_#|-Wcovered-switch-default,g
+s,@COVERED_SWITCH_DEFAULT@,|#_!!_#|,g
 s,@USE_UDIS86@,|#_!!_#|0,g
 s,@USE_OPROFILE@,|#_!!_#|0,g
 s,@USE_INTEL_JITEVENTS@,|#_!!_#|0,g
@@ -678,7 +678,7 @@ s,@LIBXML2_LIBS@,|#_!!_#|,g
 s,@LIBXML2_INC@,|#_!!_#|-I/usr/local/include/libxml2 -I/usr/local/include,g
 s,@HAVE_PTHREAD@,|#_!!_#|1,g
 s,@HUGE_VAL_SANITY@,|#_!!_#|yes,g
-s,@MMAP_FILE@,|#_!!_#|,g
+s,@MMAP_FILE@,|#_!!_#|yes,g
 s,@SHLIBEXT@,|#_!!_#|.so,g
 s,@SHLIBPATH_VAR@,|#_!!_#|LD_LIBRARY_PATH,g
 s,@LLVM_PREFIX@,|#_!!_#|/usr/local,g
@@ -690,7 +690,7 @@ s,@LLVM_ETCDIR@,|#_!!_#|/usr/local/etc/llvm,g
 s,@LLVM_INCLUDEDIR@,|#_!!_#|/usr/local/include,g
 s,@LLVM_INFODIR@,|#_!!_#|/usr/local/info,g
 s,@LLVM_MANDIR@,|#_!!_#|/usr/local/man,g
-s,@LLVM_CONFIGTIME@,|#_!!_#|Thu Jan 24 07:21:40 BRST 2013,g
+s,@LLVM_CONFIGTIME@,|#_!!_#|Tue Feb 12 20:01:31 BRST 2013,g
 s,@BINDINGS_TO_BUILD@,|#_!!_#|,g
 s,@ALL_BINDINGS@,|#_!!_#|ocaml,g
 s,@OCAML_LIBDIR@,|#_!!_#|,g
@@ -959,6 +959,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*PACKAGE_BUGREPORT\)[	 (].*,\1define\2 "http://llvm.org
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_VERSION_MAJOR\)[	 (].*,\1define\2 3 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_VERSION_MINOR\)[	 (].*,\1define\2 2 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_ON_UNIX\)[	 (].*,\1define\2 1 ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*STDC_HEADERS\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_SYS_TYPES_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_SYS_STAT_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_STDLIB_H\)[	 (].*,\1define\2 1 ,
@@ -999,7 +1000,6 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_DLERROR\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*error_t\)[	 (].*,\1define\2 int ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_ASSERT_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_CTYPE_H\)[	 (].*,\1define\2 1 ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_ERRNO_H\)[	 (].*,\1define\2 1 ,
 CEOF
     sed -f "$tmp/defines.sed" $ac_file_inputs >"$tmp/out1"
     # First, check the format of the line:
@@ -1008,6 +1008,7 @@ CEOF
 /^[	 ]*#[	 ]*define[	 ][	 ]*[_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ][_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]*[(	 ]/b def
 b
 :def
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_ERRNO_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_MALLOC_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_MEMORY_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_STDLIB_H\)[	 (].*,\1define\2 1 ,
@@ -1057,7 +1058,6 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_FENV_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_PTHREAD_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_CRASHREPORTER_INFO\)[	 (].*,\1define\2 0 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*RETSIGTYPE\)[	 (].*,\1define\2 void ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_INT64_T\)[	 (].*,\1define\2 1 ,
 CEOF
     sed -f "$tmp/defines.sed" "$tmp/out1" >"$tmp/out2"
     # First, check the format of the line:
@@ -1066,6 +1066,7 @@ CEOF
 /^[	 ]*#[	 ]*define[	 ][	 ]*[_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ][_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]*[(	 ]/b def
 b
 :def
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_INT64_T\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_UINT64_T\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_CEILF\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_FLOORF\)[	 (].*,\1define\2 1 ,
@@ -1104,6 +1105,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_LONGJMP\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_SIGSETJMP\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_SIGLONGJMP\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_WRITEV\)[	 (].*,\1define\2 1 ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_PRINTF_A\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_RAND48\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_DECL_STRERROR_S\)[	 (].*,\1define\2 0 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_ISNAN_IN_MATH_H\)[	 (].*,\1define\2 1 ,
@@ -1113,9 +1115,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_STD_ISINF_IN_CMATH\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_STDLIB_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_UNISTD_H\)[	 (].*,\1define\2 1 ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_GETPAGESIZE\)[	 (].*,\1define\2 1 ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_HAS_ATOMICS\)[	 (].*,\1define\2 1 ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE___DSO_HANDLE\)[	 (].*,\1define\2 1 ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_PREFIX\)[	 (].*,\1define\2 "/usr/local" ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_MMAP\)[	 (].*,\1define\2 1 ,
 CEOF
     sed -f "$tmp/defines.sed" "$tmp/out2" >"$tmp/out1"
     # First, check the format of the line:
@@ -1124,6 +1124,10 @@ CEOF
 /^[	 ]*#[	 ]*define[	 ][	 ]*[_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ][_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789]*[(	 ]/b def
 b
 :def
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE_MMAP_FILE\)[	 (].*,\1define\2  ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_HAS_ATOMICS\)[	 (].*,\1define\2 1 ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*HAVE___DSO_HANDLE\)[	 (].*,\1define\2 1 ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_PREFIX\)[	 (].*,\1define\2 "/usr/local" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_BINDIR\)[	 (].*,\1define\2 "/usr/local/bin" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_LIBDIR\)[	 (].*,\1define\2 "/usr/local/lib" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_DATADIR\)[	 (].*,\1define\2 "/usr/local/share/llvm" ,
@@ -1132,7 +1136,7 @@ s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_ETCDIR\)[	 (].*,\1define\2 "/usr/local/etc/llvm" 
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INCLUDEDIR\)[	 (].*,\1define\2 "/usr/local/include" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_INFODIR\)[	 (].*,\1define\2 "/usr/local/info" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_MANDIR\)[	 (].*,\1define\2 "/usr/local/man" ,
-s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Thu Jan 24 07:21:40 BRST 2013" ,
+s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_CONFIGTIME\)[	 (].*,\1define\2 "Tue Feb 12 20:01:31 BRST 2013" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_HOSTTRIPLE\)[	 (].*,\1define\2 "x86_64-unknown-openbsd5.2" ,
 s,^\([	 #]*\)[^	 ]*\([	 ]*LLVM_DEFAULT_TARGET_TRIPLE\)[	 (].*,\1define\2 "x86_64-unknown-openbsd5.2" ,
 s/ $//

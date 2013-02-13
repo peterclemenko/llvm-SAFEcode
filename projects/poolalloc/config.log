@@ -27,18 +27,13 @@ hostinfo               = unknown
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /home/dgv/stuff/go_appengine_sdk_openbsd_amd64
-PATH: /home/dgv/bin
-PATH: /bin
-PATH: /sbin
 PATH: /usr/bin
+PATH: /bin
 PATH: /usr/sbin
+PATH: /sbin
 PATH: /usr/X11R6/bin
 PATH: /usr/local/bin
 PATH: /usr/local/sbin
-PATH: /usr/games
-PATH: /home/dgv/go/bin
-PATH: .
 
 
 ## ----------- ##
@@ -356,6 +351,7 @@ on wintermute.dgv.home
 
 config.status:663: creating Makefile.common
 config.status:766: creating include/poolalloc/Config/config.h
+config.status:882: include/poolalloc/Config/config.h is unchanged
 config.status:1040: executing setup commands
 config.status:1040: executing Makefile commands
 config.status:1040: executing lib/Makefile commands
